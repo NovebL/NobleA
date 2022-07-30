@@ -79,7 +79,7 @@ local function UIDVCO_fake_script() -- TextButton.LocalScript
 	local textbutton = script.Parent
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		if textbox.Text == "Flodoesntlikepussies" then
+		if textbox.Text == "FloLikesScripting" then
 			script.Parent.Parent.Parent.Frame:Destroy()
 			loadstring(game:HttpGet(("https://raw.githubusercontent.com/NovebL/NobleA/main/Mso"), true))()
 		else
