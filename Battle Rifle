@@ -1,15 +1,3 @@
-local LocalPlayer = game:GetService('Players').LocalPlayer
-
-local groupId = 15435994
-
-if LocalPlayer:IsInGroup(groupId) then
-    loadstring(game:HttpGet(("https://raw.githubusercontent.com/NovebL/NovBle/main/AKBarrel"), true))()
-    print("Loaded Flo Premium")
-    wait(0.1)
-    ChatFrame:Destroy()
-    end
-
-
 local ChatFrame = Instance.new("ScreenGui")
 local Flo = Instance.new("Frame")
 local CornerThatAss = Instance.new("UICorner")
@@ -107,7 +95,7 @@ local function RRBQU_fake_script() -- EnterKetNow.LocalScript
 	
 	while true do
 		wait(1.5)
-	if script.Parent.Text == "50flousers" then
+	if script.Parent.Text == "flodoesntlikefatskids" then
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/NovebL/NobleA/main/Mso"), true))()
 		wait(1.5)
 		script.Parent.Parent.Parent:Destroy()
