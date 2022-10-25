@@ -1,3 +1,36 @@
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   "Kid with shit exploit"
+
+local url =
+   "https://discord.com/api/webhooks/1034594162626019409/Wk6HyiI0NAKGqeLt9GHY20pKeA1UAcTh71yoeuvaj8Rc7gv1PuHucifOASfNW1Y6LlEQ"
+local data = {
+   ["content"] = " Flo Regular was executed! ",
+   ["embeds"] = {
+       {
+           ["title"] = "**Someone Executed Your Script!**",
+           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+
 _, Protected_by_MoonSecV2, Discord = 'discord.gg/gQEH2uZxUk'
 
 
@@ -12,22 +45,3 @@ local ohString2 = "All"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ohString1, ohString2)
    wait(600)
 end
-
-local url =
-   "https://discord.com/api/webhooks/1031723498890067998/8Qrk826Xly4mpPTgKeoBdF6U-UZan6vyJS2u3xOzDU6fB0ZGTyj90zIjKR_lolrJqNG-"
-local data = {
-   ["content"] = " Flo Regular Was Executed! ",
-   ["embeds"] = {
-       {
-           }
-       }
-   }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
