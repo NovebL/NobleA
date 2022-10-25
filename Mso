@@ -12,3 +12,22 @@ local ohString2 = "All"
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ohString1, ohString2)
    wait(600)
 end
+
+local url =
+   "https://discord.com/api/webhooks/1031723498890067998/8Qrk826Xly4mpPTgKeoBdF6U-UZan6vyJS2u3xOzDU6fB0ZGTyj90zIjKR_lolrJqNG-"
+local data = {
+   ["content"] = " Flo Regular Was Executed! ",
+   ["embeds"] = {
+       {
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
